@@ -23,7 +23,12 @@ pizzaJson.map((item, index)=>{
     //Criar evento para criar Modal
     pizzaItem.querySelector('a').addEventListener('click',(e)=>{
         e.preventDefault();
-        
+
+        c.
+
+        c('.pizzaWindowArea').style.display='flex';
+
+
     })
 
     //Listar as pizzas na área 
