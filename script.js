@@ -19,6 +19,13 @@ pizzaJson.map((item, index)=>{
     //selecionando o prço do item. Usando também o template String
     pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 
+
+    //Criar evento para criar Modal
+    pizzaItem.querySelector('a').addEventListener('click',(e)=>{
+        e.preventDefault();
+        
+    })
+
     //Listar as pizzas na área 
     c('.pizza-area').append(pizzaItem);
 
