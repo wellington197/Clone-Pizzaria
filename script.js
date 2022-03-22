@@ -37,25 +37,29 @@ pizzaJson.map((item, index)=>{
         
         let key=e.target.closest('.pizza-item').getAttribute('data-key');
 
-        c('.pizzaInfo h1').innerHTML=pizzaJson[key].name;
 
 
-
-    /*Área de inserção do tempo de transição da janela ao clicar nas pizzas*/
-    c('.pizzaWindowArea').style.opacity=0;
-    c('.pizzaWindowArea').style.display='flex';
-
-        //Setar tempo para a transição da janela do carrinho na sua abertura
-        setTimeout(()=>{
-            c('.pizzaWindowArea').style.opacity=1;
-        },200);
-      
+            /*Inserindo os itens no Modal*/
+            c('.pizzaBig img').src=pizzaJson[key].img;
+            c('.pizzaInfo h1').innerHTML=pizzaJson[key].name;
+            c('.pizzaInfo--desc').innerHTML=pizzaJson[key].description;
 
 
-    })
+            /*Área de inserção do tempo de transição da janela ao clicar nas pizzas*/
+            c('.pizzaWindowArea').style.opacity=0;
+            c('.pizzaWindowArea').style.display='flex';
 
-    //Listar as pizzas na área 
-    c('.pizza-area').append(pizzaItem);
+                //Setar tempo para a transição da janela do carrinho na sua abertura
+                setTimeout(()=>{
+                    c('.pizzaWindowArea').style.opacity=1;
+                },200);
+            
+
+
+            })
+
+            //Listar as pizzas na área 
+            c('.pizza-area').append(pizzaItem);
 
 
 });//fim do mapeamento de item
