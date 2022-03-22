@@ -1,7 +1,10 @@
 //Criar um função anônima
+/*
 const c=(el)=>document.querySelector(el);
-const cs=(el)=>document.querySelectorall(el);
+const cs=(el)=>document.querySelectorall(el);*/
 
+const c = (el)=>document.querySelector(el);
+const cs = (el)=>document.querySelectorAll(el);
 
 
 //Função de mapeamento do item no arquivo JSon
@@ -39,10 +42,23 @@ pizzaJson.map((item, index)=>{
 
 
 
-            /*Inserindo os itens no Modal*/
+            /*Inserindo os itens no pizzaWindowArea*/
             c('.pizzaBig img').src=pizzaJson[key].img;
             c('.pizzaInfo h1').innerHTML=pizzaJson[key].name;
             c('.pizzaInfo--desc').innerHTML=pizzaJson[key].description;
+            c('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[key].price.toFixed(2)}`;
+
+            //remover a seleção do botão select
+            c('.pizzaInfo--size.selected').classList.remove('selected');
+            //inserindo o peso das pizzas
+            cs('.pizzaInfo--size').forEach((size, sizeIndex)=>{
+                if(sizeIndex == 2){
+                    size.classList.add('selected');
+                }
+
+                size.querySelector('span').innerHTML=pizzaJson[key].sizes[sizeIndex];
+            });
+
 
 
             /*Área de inserção do tempo de transição da janela ao clicar nas pizzas*/
