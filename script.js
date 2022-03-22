@@ -1,12 +1,22 @@
 //Criar um função anônima
-
 const c=(el)=>document.querySelector(el);
 const cs=(el)=>document.querySelectorall(el);
 
-//Função de mapeamento do item
+
+
+//Função de mapeamento do item no arquivo JSon
 pizzaJson.map((item, index)=>{
-        //preencher as informações em pizzaitem
+    //preencher as informações em pizzaitem
     let pizzaItem = c('.models .pizza-item').cloneNode(true);
+
+
+    // setando a chave da pizza em específico para saber qual item eu cliquei
+    pizzaItem.setAttribute('data-key', index);
+
+
+
+
+    /*Área de inserção das informçãoes no modal das pizzas*/
 
     //selecionando imagem na tela para substituição das imagens da pizza. Neste campo tem de buscar a TAG img
     pizzaItem.querySelector('.pizza-item--img img').src=item.img;
@@ -19,9 +29,34 @@ pizzaJson.map((item, index)=>{
     //selecionando o prço do item. Usando também o template String
     pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 
+
+    //Criar evento para criar Modal
+    pizzaItem.querySelector('a').addEventListener('click',(e)=>{
+        e.preventDefault();
+
+        
+        let key=e.target.closest('.pizza-item').getAttribute('data-key');
+
+        c('.pizzaInfo h1').innerHTML=pizzaJson[key].name;
+
+
+
+    /*Área de inserção do tempo de transição da janela ao clicar nas pizzas*/
+    c('.pizzaWindowArea').style.opacity=0;
+    c('.pizzaWindowArea').style.display='flex';
+
+        //Setar tempo para a transição da janela do carrinho na sua abertura
+        setTimeout(()=>{
+            c('.pizzaWindowArea').style.opacity=1;
+        },200);
+      
+
+
+    })
+
     //Listar as pizzas na área 
     c('.pizza-area').append(pizzaItem);
 
 
-});
+});//fim do mapeamento de item
 
