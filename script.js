@@ -1,8 +1,5 @@
 //Criar um função anônima
-/*
-const c=(el)=>document.querySelector(el);
-const cs=(el)=>document.querySelectorall(el);*/
-
+let modalQt=1;
 const c = (el)=>document.querySelector(el);
 const cs = (el)=>document.querySelectorAll(el);
 
@@ -36,10 +33,10 @@ pizzaJson.map((item, index)=>{
     //Criar evento para criar Modal
     pizzaItem.querySelector('a').addEventListener('click',(e)=>{
         e.preventDefault();
+        modalQt=1;
 
         
         let key=e.target.closest('.pizza-item').getAttribute('data-key');
-
 
 
             /*Inserindo os itens no pizzaWindowArea*/
@@ -59,6 +56,8 @@ pizzaJson.map((item, index)=>{
                 size.querySelector('span').innerHTML=pizzaJson[key].sizes[sizeIndex];
             });
 
+            //Inserir a quantidade de pizzas no modal
+            c('.pizzaInfo--qt').innerHTML=modalQt;
 
 
             /*Área de inserção do tempo de transição da janela ao clicar nas pizzas*/
