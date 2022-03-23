@@ -79,3 +79,21 @@ pizzaJson.map((item, index)=>{
 
 });//fim do mapeamento de item
 
+
+
+///////////////////////////////////Eventos do Modal
+
+function closeModal(){
+            /*Área de inserção do tempo de transição da janela ao clicar nas pizzas*/
+            c('.pizzaWindowArea').style.opacity=0;
+
+            //Esperar meio segundo para fechar
+            setTimeout(()=>{
+                c('.pizzaWindowArea').style.display='none';
+            },500);
+}
+
+
+cs('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item)=>{
+            item.addEventListener('click',closeModal);
+});
