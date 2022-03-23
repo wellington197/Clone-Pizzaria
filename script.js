@@ -87,13 +87,37 @@ function closeModal(){
             /*Área de inserção do tempo de transição da janela ao clicar nas pizzas*/
             c('.pizzaWindowArea').style.opacity=0;
 
-            //Esperar meio segundo para fechar
+            //Esperar meio segundo para fechar 
             setTimeout(()=>{
                 c('.pizzaWindowArea').style.display='none';
             },500);
-}
+}//fim do close Modal
 
-
+//selecionando os botões de cancelar e voltar para fechar window
 cs('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item)=>{
             item.addEventListener('click',closeModal);
+});
+
+
+
+////////////////////Inserindo as funções dos botões de inserir mais e menos
+
+//aumentar a quantidade
+c('.pizzaInfo--qtmais').addEventListener('click',()=>{
+    modalQt++;
+    //Inserir a quantidade de pizzas no modal
+    c('.pizzaInfo--qt').innerHTML=modalQt;
+
+});
+
+//diminuir a quantidade
+c('.pizzaInfo--qtmenos').addEventListener('click',()=>{
+   
+    //validar se o valor é acima de 1
+    if(modalQt>1){
+        modalQt--;
+    }
+    //Inserir a quantidade de pizzas no modal
+    c('.pizzaInfo--qt').innerHTML=modalQt;
+
 });
