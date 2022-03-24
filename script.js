@@ -1,5 +1,8 @@
 //Criar um função anônima
 let modalQt=1;
+let cart=[];
+let modalKey=0;
+
 const c = (el)=>document.querySelector(el);
 const cs = (el)=>document.querySelectorAll(el);
 
@@ -33,11 +36,12 @@ pizzaJson.map((item, index)=>{
     //Criar evento para criar Modal
     pizzaItem.querySelector('a').addEventListener('click',(e)=>{
         e.preventDefault();
-        modalQt=1;
-
+      
+     
         
         let key=e.target.closest('.pizza-item').getAttribute('data-key');
-
+        modalQt=1;
+        modalKey= key;
 
             /*Inserindo os itens no pizzaWindowArea*/
             c('.pizzaBig img').src=pizzaJson[key].img;
@@ -121,3 +125,30 @@ c('.pizzaInfo--qtmenos').addEventListener('click',()=>{
     c('.pizzaInfo--qt').innerHTML=modalQt;
 
 });
+
+////////////////////Função de inserir os tamanhos ao clicar no tamanho
+
+//inserindo o peso das pizzas
+cs('.pizzaInfo--size').forEach((size, sizeIndex)=>{
+    size.addEventListener('click',(e)=>{
+        //remover a seleção do botão select
+        c('.pizzaInfo--size.selected').classList.remove('selected');
+        size.classList.add('selected');
+    });
+});
+
+
+////////////////////Adicionar ação do botão ao carrinho
+
+c('.pizzaInfo--addButton').addEventListener('click', ()=>{
+
+    let size=c('.pizzaInfo--size.selected').getAttribute('data-key');
+
+    cart.push({
+        id:pizzaJson[modalKey].id,
+        size,
+        qt:modalQt
+    });
+    closeModal();
+});
+
