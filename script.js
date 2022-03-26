@@ -126,7 +126,7 @@ c('.pizzaInfo--qtmenos').addEventListener('click',()=>{
 
 });
 
-////////////////////Função de inserir os tamanhos ao clicar no tamanho
+////////////////////Função de inserir os tamanhos e quantidade no carrinho ao clicar no botão
 
 //inserindo o peso das pizzas
 cs('.pizzaInfo--size').forEach((size, sizeIndex)=>{
@@ -138,7 +138,7 @@ cs('.pizzaInfo--size').forEach((size, sizeIndex)=>{
 });
 
 
-////////////////////Adicionar ação do botão ao carrinho
+//////////////////// Adicionar ação do botão ao carrinho
 
 c('.pizzaInfo--addButton').addEventListener('click', ()=>{
 
