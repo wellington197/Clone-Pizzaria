@@ -1,13 +1,13 @@
-//Criar um função anônima
 let modalQt=1;
 let cart=[];
 let modalKey=0;
 
+//Criar um função anônima
 const c = (el)=>document.querySelector(el);
 const cs = (el)=>document.querySelectorAll(el);
 
 
-//Função de mapeamento do item no arquivo JSon
+///////////////////Função de mapeamento do item no arquivo JSon
 pizzaJson.map((item, index)=>{
     //preencher as informações em pizzaitem
     let pizzaItem = c('.models .pizza-item').cloneNode(true);
@@ -143,12 +143,24 @@ cs('.pizzaInfo--size').forEach((size, sizeIndex)=>{
 c('.pizzaInfo--addButton').addEventListener('click', ()=>{
 
     let size=c('.pizzaInfo--size.selected').getAttribute('data-key');
+    
+    // adicionar identificador a Pizza pelo códiog e tamanho.
+    let identifier=pizzaJson[modalKey].id+'@'+size;
 
-    cart.push({
-        id:pizzaJson[modalKey].id,
-        size,
-        qt:modalQt
-    });
+    //ele irá retornar valor -1 se item existir já no carrinho
+    let key=cart.findIndex((item)=>item.identifier == identifier);
+
+    // se resultado do letKey for -1 executar a ação
+    if (key>-1){
+            cart[key].qt+=modalQt;
+    }else{
+            cart.push({
+                identifier,
+                id:pizzaJson[modalKey].id,
+                size,
+                qt:modalQt
+            });
+    }
     closeModal();
 });
 
