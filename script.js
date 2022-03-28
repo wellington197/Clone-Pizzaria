@@ -168,10 +168,29 @@ c('.pizzaInfo--addButton').addEventListener('click', ()=>{
 });
 
 
+// Função de click para abrir carrinho
+c('.menu-openner').addEventListener('click', ()=>{
+    if(cart.length>0){
+        c('aside').style.left='0';
+
+    }
+});
+
+//Fechar o menu do carrinho
+c('.menu-closer').addEventListener('click', ()=>{
+    if(cart.length>0){
+        c('aside').style.left='100vw';
+
+    }
+});
 
 /////////////// Função de atulaizar o carrinho de compras
 
 function updateCart(){
+
+    //adicionar a quantidade no carrinho
+    c('.menu-openner span').innerHTML=cart.length;
+
     if(cart.length>0){
         c('aside').classList.add('show');
 
@@ -245,6 +264,7 @@ function updateCart(){
 
     }else{
         c('aside').classList.remove('show');
+        c('aside').style.left='100vw';
 
     }
 }
