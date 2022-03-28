@@ -21,7 +21,7 @@ Também será aplicado uma Pipeline de integração continua com gitactions e gi
 ### Conceitos aplicados no projeto
 
 - Criação do clone da NETFLIX;
-- Aplicação de conceitos em FLEXBOX;
+- Aplicação de conceitos em FLEXBOX e Grid para estilização da página;
 - Estilização em HTML5 e CSS3;
 - Conceitos de JavaScript;
 - Subindo projeto para GitHub;
@@ -37,19 +37,6 @@ Também será aplicado uma Pipeline de integração continua com gitactions e gi
 
 <h1>Tela inicial</h1>
 <img src="./images/imagensprojeto.PNG"/></br></br>
-
-<h1>Tela de apresentação dos filmes</h1>
-<img src="static/images/paginas_do_projeto/tela_apresentação_filmes.PNG"/></br></br>
-
-<h1>Listagem dos filmes</h1>
-<img src="static/images/paginas_do_projeto/Filmes.PNG"/></br></br>
-
-<h1>Tela de login</h1>
-<img src="static/images/paginas_do_projeto/login.PNG"/></br></br>
-
-<h1>Tela de usuários</h1>
-<img src="static/images/paginas_do_projeto/usuarios.PNG"/></br></br>
-
 
 ### Atividades realizadas 
 
@@ -75,24 +62,23 @@ Também será aplicado uma Pipeline de integração continua com gitactions e gi
 ## Como está andamento do projeto.
 
 > Status do Projeto: Concluido :heavy_check_mark:</br>
-> Status do Projeto: Em desenvolvimento :warning:
+> Status do Projeto: Em desenvolvimento :heavy_check_mark:</br>
 
 ## Linguagens e libs utilizadas :books;
     * LINGUAGENS
         - HTML5
         - CSS3
         - JavaScript
-        - Node Js
 
     * METODOLOGIA
         - Flexbox
+        - Grid
         - RESPONSIVIDADE
         
     * FERRAMENTAS
         - GitHub
         - GitPages
         - Visual Stúdio
-        - Travis
 
 ## Mentoria e Colaboração:
 
