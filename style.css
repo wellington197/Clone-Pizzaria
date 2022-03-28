@@ -23,7 +23,7 @@ header {
     top:0;
     right:0;
     height:60px;
-    background-color:#399ade;
+    background-color:#2fd548;
     display:none;
     justify-content: flex-end;
     align-items: center;
@@ -31,7 +31,7 @@ header {
 .menu-openner {
     margin-right: 15px;
     font-size: 26px;
-    background-color: #a9dcff;
+    background-color: #ddf2ff;
     padding: 5px 20px;
     border-radius: 5px;
 }
@@ -46,7 +46,7 @@ header {
 }
 
 aside {
-    background-color:#9ccbe6;
+    background-color:#ffffff;
     width:0vw;
     font-family:'Hepta Slab', Helvetica, Arial;
     transition:all ease .2s;
@@ -97,7 +97,7 @@ h1 {
     height:50px;
     line-height:50px;
     border-radius:25px;
-    background-color:#388bc5;
+    background-color:#159cfd;
     text-align:center;
     color:#FFF;
     font-size:22px;
@@ -106,7 +106,7 @@ h1 {
     transition:all ease .2s;
 }
 .pizza-item a:hover .pizza-item--add {
-    background-color:#244c88;
+    background-color:#066fba;
 }
 .pizza-item--price {
     font-size:15px;
