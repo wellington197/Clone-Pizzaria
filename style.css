@@ -22,12 +22,33 @@ header {
     left:0;
     top:0;
     right:0;
-    height:60px;
+
     background-color:#2fd548;
-    display:none;
-    justify-content: flex-end;
+    display:block;
     align-items: center;
 }
+
+
+.container{
+    max-width: 1940px;
+    margin: auto;
+}
+.header-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.header-left img{
+    height: 84px;
+    width: 84px;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+}
+
 .menu-openner {
     margin-right: 15px;
     font-size: 26px;
