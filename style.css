@@ -22,22 +22,26 @@ header {
     left:0;
     top:0;
     right:0;
+    margin: 0;
 
-    background-color:#2fd548;
+    flex-direction: column;
     display:block;
     align-items: center;
+    height: 100vh;
+    
 }
 
-
 .container{
-    max-width: 1940px;
     margin: auto;
 }
 .header-area{
+    background-color:#2fd548;
+
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+
 }
 .header-left img{
     height: 84px;
@@ -47,6 +51,10 @@ header {
 .header-right{
     display: flex;
     align-items: center;
+}
+
+.slider{
+    background-color: #159cfd;
 }
 
 .menu-openner {
@@ -79,6 +87,7 @@ aside.show {
 .cart--area {
     padding:20px;
 }
+
 main {
     flex:1;
     padding:20px;

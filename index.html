@@ -8,32 +8,32 @@
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+ <!--Models - Modelos que serão apresntados na tela com as Pizzas-->
+ <div class="models">
+    <div class="pizza-item">
+        <a href="">
+            <div class="pizza-item--img"><img src="" /></div>
+            <div class="pizza-item--add">+</div>
+        </a>
+        <div class="pizza-item--price">R$ --</div>
+        <div class="pizza-item--name">--</div>
+        <div class="pizza-item--desc">--</div>
+    </div>
 
-    <!--Models - Modelos que serão apresntados na tela com as Pizzas-->
-    <div class="models">
-        <div class="pizza-item">
-            <a href="">
-                <div class="pizza-item--img"><img src="" /></div>
-                <div class="pizza-item--add">+</div>
-            </a>
-            <div class="pizza-item--price">R$ --</div>
-            <div class="pizza-item--name">--</div>
-            <div class="pizza-item--desc">--</div>
+<!--cart - mostra quantos itens aparece no carrinho na tela-->
+
+    <div class="cart--item">
+        <img src="" />
+        <div class="cart--item-nome">--</div>
+        <div class="cart--item--qtarea">
+            <button class="cart--item-qtmenos">-</button>
+            <div class="cart--item--qt">1</div>
+            <button class="cart--item-qtmais">+</button>
         </div>
-
-    <!--cart - mostra quantos itens aparece no carrinho na tela-->
-
-        <div class="cart--item">
-            <img src="" />
-            <div class="cart--item-nome">--</div>
-            <div class="cart--item--qtarea">
-                <button class="cart--item-qtmenos">-</button>
-                <div class="cart--item--qt">1</div>
-                <button class="cart--item-qtmais">+</button>
-            </div>
-        </div>
-    </div><!--Fim da div Models-->
-
+    </div>
+</div><!--Fim da div Models-->
+  
 
     <header>
         <div class="container header-area">
@@ -47,17 +47,27 @@
             <div class="header-right">
                 <div class="menu-openner"><span>0</span>🛒</div>
 
+            </div>
+    
         </div>
 
-        <div class=""></div>
+        <div class="slider">
+            .....
+        </div>
+    
+
+
     </header>
 
+ 
 
     
     <main>
         <h1>Pizzas</h1>
         <div class="pizza-area"></div>
     </main>
+
+    
     <aside>
         <div class="cart--area">
             <div class="menu-closer">❌</div>
@@ -116,6 +126,5 @@
 
     <script type="text/javascript" src="pizzas.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="script-slider.js"></script>
 </body>
 </html>
